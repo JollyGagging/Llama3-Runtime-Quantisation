@@ -73,4 +73,19 @@ A critical discrepancy observed is the variance between Task 1 (**5.42 tokens/se
 │   ├── baseline_fp16_results.json           <-- High-precision uncompressed execution data
 │   └── quantized_nf4_results.json           <-- 4-bit optimized NormalFloat execution data
 └── requirements.txt        <-- Standard package dependency manifest
+```
 
+## 7. How to Reproduce
+
+Follow these precise steps to set up the environment, replicate the baseline benchmarks, execute the 4-bit quantization optimization pipeline, and verify the resulting hardware metrics.
+
+### Prerequisites & Hardware Requirements
+* **GPU:** NVIDIA T4 GPU (or higher) with at least 15GB VRAM.
+* **Environment:** Python 3.10+ (Tested on Google Colab Architecture).
+* **Hugging Face Account:** You will need a Hugging Face User Access Token with approved access to the official `meta-llama/Meta-Llama-3-8B` repository.
+
+### Step 1: Clone this Repository
+Begin by cloning the benchmarking framework to your local instance or cloud environment:
+```bash
+git clone [https://github.com/](https://github.com/)<YOUR_GITHUB_USERNAME>/llama3-optimization-benchmark.git
+cd llama3-optimization-benchmark
