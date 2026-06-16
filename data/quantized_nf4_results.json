@@ -1,0 +1,9 @@
+{
+    "model_id": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "precision": "4-bit NF4 (Quantized)",
+    "vram_allocated_gb": 5.8,
+    "benchmarks": {
+        "task_1_math_tokens_per_sec": 5.42,
+        "task_2_coding_tokens_per_sec": 9.85
+    }
+}
