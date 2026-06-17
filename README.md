@@ -87,8 +87,8 @@ Follow these precise steps to set up the environment, replicate the baseline ben
 ### Step 1: Clone this Repository
 Begin by cloning the benchmarking framework to your local instance or cloud environment:
 ```bash
-git clone https://github.com/JollyGaging/llama3-optimization-benchmark.git
-cd llama3-optimization-benchmark
+git clone https://github.com/JollyGaging/Llama3-Runtime-Quantisation.git
+cd Llama3-Runtime-Quantisation
 ```
 ### Step 2: Install Dependencies
 Install the required deep learning and model compression packages specified in the environment manifest:
