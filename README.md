@@ -102,17 +102,19 @@ from huggingface_hub import login
 login(token="Hugging Face Access Token")
 ```
 ### Step 4: Execute the Benchmarking Notebooks
+```bash
 1)Open and execute the master notebook to generate the performance logs:
 Navigate to the notebooks/ directory and open llama3_benchmark.ipynb.
 
 2)Run Part 1 (FP16 Baseline Control Group): This loads the uncompressed model into memory, running execution checks against the target evaluation prompts. It generates and saves data/baseline_fp16_results.json, locking in the initial ~11.95 GB VRAM utilization and ~1.18 tokens/sec generation metric.
 
 3)Run Part 2 (4-bit NF4 Quantization Treatment Group): This initiates the bitsandbytes quantization config pipeline, freezing the model base weights down to 4-bit precision. It executes identical prompt tasks and saves data/quantized_4bit_results.json.
+```
 
 ### Step 5: Metric Verification & Data Generation
 Once execution completes, confirm that your generated performance arrays match the logs inside the data/ folder. The built-in compilation code will print out a comparative analytics table showing:
-
+```bash
 Exact VRAM capacity reclaimed (re-allocating the ~11.95 GB baseline overhead).
 
 Relative latency changes and generation speed modifications (tokens/second scale metrics).
-
+```
