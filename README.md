@@ -1,13 +1,13 @@
 # Llama3-Optimization-Benchmark
 
-# Empirical Evaluation of 4-Bit NF4 Quantization for Large Language Models on Consumer-Grade Hardware
+# Empirical Evaluation of 4-Bit NF4 Quantization for Large Language Models on Consumer Hardware
 
-An empirical benchmarking study investigating memory footprints, compute bus dynamics, and generation throughput configurations using **Meta-Llama-3-8B-Instruct** on localized hardware resource constraints (NVIDIA T4 GPU architecture). 
+An empirical benchmarking study investigating memory footprints, compute bus dynamics, and generation throughput configurations using **Meta-Llama-3-8B-Instruct** on localized hardware resource (NVIDIA T4 GPU architecture). 
 
 ---
 
-## 1. Abstract
-As the parameter scale of state-of-the-art Large Language Models (LLMs) continues to expand, deploying uncompressed weights in localized, resource-constrained environments presents a massive memory barrier. This research establishes a strict performance baseline for an uncompressed 16-bit floating-point (`FP16`) Llama-3-8B model and evaluates the computational efficiency gains achieved through **4-bit NormalFloat (NF4)** quantization using a `bitsandbytes` pipeline. Our empirical findings demonstrate that by optimizing weight tensor memory layout, we successfully lowered the absolute VRAM ceiling by approximately **51.4%**, clearing critical memory bus bottlenecks and securing up to an **8.2x acceleration** in generation speed on a single, free-tier consumer GPU.
+## 1. Abstract (CONTEXT)
+As the parameter scale of Large Language Models (LLMs) continues to expand, deploying uncompressed weights in localized, resource constrained environments presents a massive memory barrier. This research establishes a strict performance baseline for an uncompressed 16-bit floating-point (`FP16`) Llama-3-8B model and evaluates the computational efficiency gains achieved through **4-bit NormalFloat (NF4)** quantization using a `bitsandbytes` pipeline. Our empirical findings demonstrate that by optimizing weight tensor memory layout, we successfully lowered the absolute VRAM ceiling by approximately **51.4%**, clearing critical memory bus bottlenecks and securing up to an **8.2x acceleration** in generation speed on a single, free tier consumer GPU.
 
 ---
 
@@ -66,16 +66,16 @@ A critical discrepancy observed is the variance between Task 1 (**5.42 tokens/se
 
 ## 6. Project Repository Layout
 ```text
-├── README.md               <-- Methodology, Benchmarking Matrix, and Technical Analysis
+├── README.md                                <- Benchmarking Matrix, and Technical Analysis
 ├── notebooks/
-│   └── llama3_optimization_benchmark.ipynb  <-- Clean, documented Google Colab Research Notebook
+│   └── llama3_optimization_benchmark.ipynb  <- Google Colab Research Notebook
 ├── data/
-│   ├── baseline_fp16_results.json           <-- High-precision uncompressed execution data
-│   └── quantized_nf4_results.json           <-- 4-bit optimized NormalFloat execution data
-└── requirements.txt        <-- Standard package dependency manifest
+│   ├── baseline_fp16_results.json           <- Uncompressed execution data
+│   └── quantized_nf4_results.json           <- 4-bit optimized NormalFloat execution data
+└── requirements.txt                         <- Standard package dependency
 ```
 
-## 7. How to Reproduce
+## 7. How to Reproduce my Results
 
 Follow these precise steps to set up the environment, replicate the baseline benchmarks, execute the 4-bit quantization optimization pipeline, and verify the resulting hardware metrics.
 
@@ -87,7 +87,7 @@ Follow these precise steps to set up the environment, replicate the baseline ben
 ### Step 1: Clone this Repository
 Begin by cloning the benchmarking framework to your local instance or cloud environment:
 ```bash
-git clone https://github.com/jollygaging/llama3-optimization-benchmark.git
+git clone https://github.com/JollyGaging/llama3-optimization-benchmark.git
 cd llama3-optimization-benchmark
 ```
 ### Step 2: Install Dependencies
@@ -99,7 +99,7 @@ pip install -r requirements.txt
 Before running the benchmark notebook, execute the following command in your terminal or a code cell to authenticate your session with Hugging Face:
 ```bash
 from huggingface_hub import login
-login(token="YOUR_HUGGING_FACE_ACCESS_TOKEN")
+login(token="Hugging Face Access Token")
 ```
 ### Step 4: Execute the Benchmarking Notebooks
 1)Open and execute the master notebook to generate the performance logs:
