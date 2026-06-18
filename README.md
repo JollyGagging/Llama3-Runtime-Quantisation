@@ -30,7 +30,7 @@ The weights were loaded into memory via standard native 16-bit precision configu
 The memory footprint was optimized using a high-density configuration using the `BitsAndBytesConfig` API wrapper:
 * **Quantization Type:** `nf4` (NormalFloat4, specifically mapped for normally distributed model weights)
 * **Nested/Double Quantization:** Enabled (Compressing the quantization constants themselves to save an extra 0.4 bits per parameter)
-* **Compute Datatype:** `torch.float16` (Enforcing regular 16-bit float operations during forward-pass tensor multiplication on the GPU cores to preserve cognitive stability)
+* **Compute Datatype:** `torch.float16` (Enforcing regular 16-bit float operations during forward-pass tensor multiplication on the GPU cores to preserve cognitive stability).
 
 ---
 
