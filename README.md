@@ -1,4 +1,4 @@
-# Llama3-Optimization-Benchmark
+# Llama3-Runtime-Quantization-Benchmark
 
 # Empirical Evaluation of 4-Bit NF4 Quantization for Large Language Models on Consumer Hardware
 
